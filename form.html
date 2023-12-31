@@ -1,0 +1,195 @@
+<!-- ## The html code of the form goes here -->
+<!-- ## This is included in the Index.html page using "include('Form')" function -->
+
+<form id="myForm" class="p-2 border border-light rounded col-md-12" onsubmit="handleFormSubmit(this)" style="background-color:#FFFAFA;"> <!-- Call JavaScript function "handleFormSubmit" -->
+  <p class="h2 mb-4 text-center">ข้อมูลนักศึกษา</p>
+
+  <div class="form-row">
+		<div class="form-group col-md-3">
+			<label for="RecId" >รหัสนักศึกษา</label>
+		  <input type="text" class="form-control" id="RecId" name="RecId" placeholder="" readonly>
+	  </div>
+    <div class="form-group col-md-5">
+			<label for="department" >สาขาวิชา</label>
+		  <input type="text" class="form-control" id="department" name="department" placeholder="" readonly>
+	  </div>
+    <div class="form-group col-md-4">
+			<label for="faculty" >คณะ</label>
+		  <input type="text" class="form-control" id="faculty" name="faculty" placeholder="" readonly>
+	  </div>
+  </div>
+
+  <div class="form-row">
+		<div class="form-group col-md-2">
+			<label for="prefix" >คำนำหน้าชื่อ</label>
+		    <select class="form-select" id="prefix" name="prefix" aria-label="Default select example">
+          <option value="นาย">นาย</option>
+          <option value="นาง">นาง</option>
+          <option value="นางสาว">นางสาว</option>
+        </select>
+	  </div>
+    <div class="form-group col-md-5">
+			<label for="name" >ชื่อ</label>
+		  <input type="text" class="form-control" id="name" name="name" placeholder="">
+	  </div>
+    <div class="form-group col-md-5">
+			<label for="lastname" >นามสกุล</label>
+		  <input type="text" class="form-control" id="lastname" name="lastname" placeholder="">
+	  </div>
+  </div>
+
+  <div class="form-row">
+		<div class="form-group col-md-2">
+			<label for="prefixen" >คำนำหน้าชื่อ(EN)</label>
+		    <select class="form-select" id="prefixen" name="prefixen" aria-label="Default select example">
+          <option value="Mr.">Mr.</option>
+          <option value="Mrs.">Mrs.</option>
+          <option value="Miss">Miss</option>
+        </select>
+	  </div>
+    <div class="form-group col-md-5">
+			<label for="nameen" >ชื่อภาษาอังกฤษ</label>
+		  <input type="text" class="form-control" id="nameen" name="nameen" placeholder="">
+	  </div>
+    <div class="form-group col-md-5">
+			<label for="lastnameen" >นามสกุลภาษาอังกฤษ</label>
+		  <input type="text" class="form-control" id="lastnameen" name="lastnameen" placeholder="">
+	  </div>
+  </div>
+
+  <div class="form-row">
+		<div class="form-group col-md-3">
+			<label for="id" >หมายเลขบัตรประชาชน</label>
+		  <input type="text" class="form-control" id="id" name="id" placeholder="">
+	  </div>
+    <div class="form-group col-md-3">
+			<label for="startid">วันออกบัตรประชาชน</label>
+			<input type="text" class="form-control" id="startid" name="startid" placeholder="DD/MM/YYYY (ปี พ.ศ.) เช่น 01/11/2564">
+	  </div>
+    <div class="form-group col-md-3">
+			<label for="endid">วันหมดอายุบัตรประชาชน</label>
+			<input type="text" class="form-control" id="endid" name="endid" placeholder="DD/MM/YYYY (ปี พ.ศ.) เช่น 01/11/2564">
+	  </div>
+    <div class="form-group col-md-1">
+			<label for="country" >ประเทศที่เกิด</label>
+		  <input type="text" class="form-control" id="country" name="country" placeholder="">
+	  </div>
+    <div class="form-group col-md-1">
+			<label for="nationality" >สัญชาติ</label>
+		  <input type="text" class="form-control" id="nationality" name="nationality" placeholder="">
+	  </div>
+    <div class="form-group col-md-1">
+			<label for="ethnicity" >เชื้อชาติ</label>
+		  <input type="text" class="form-control" id="ethnicity" name="ethnicity" placeholder="">
+	  </div>
+  </div>
+
+	<div class="form-row">
+		<div class="form-group col-md-2">
+			<label for="gender" >เพศ</label>
+		    <select class="form-select" id="gender" name="gender" aria-label="Default select example">
+          <option value="ชาย">ชาย</option>
+          <option value="หญิง">หญิง</option>
+        </select>
+	  </div>
+		<div class="form-group col-md-1">
+			<label for="blood" >กรุ๊ปเลือด</label>
+		    <select class="form-select" id="blood" name="blood" aria-label="Default select example">
+          <option selected>-</option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="O">O</option>
+          <option value="AB">AB</option>
+        </select>
+	  </div>
+     <div class="form-group col-md-3">
+			<label for="dateOfBirth">วันเดือนปีเกิด</label>
+			<input type="text" class="form-control" id="dateOfBirth" name="dateOfBirth" placeholder="DD/MM/YYYY (ปี พ.ศ.) เช่น 01/11/2564">
+	  </div>
+    <div class="form-group col-md-3">
+			<label for="email" >อีเมล</label>
+		  <input type="text" class="form-control" id="email" name="email" placeholder="">
+	  </div>
+    <div class="form-group col-md-3">
+			<label for="telephone" >เบอร์โทรศัพท์</label>
+		  <input type="text" class="form-control" id="telephone" name="telephone" placeholder="">
+	  </div>
+	</div>
+
+  <div class="form-row">
+    <div class="form-group col-md-4">
+			<label for="addressatcard" >ที่อยู่ตามบัตรประชาชน</label>
+		  <input type="text" class="form-control" id="addressatcard" name="addressatcard" placeholder="">
+	  </div>
+    <div class="form-group col-md-2">
+			<label for="subdistrictatcard" >ตำบล (ตามบัตร)</label>
+		  <input type="text" class="form-control" id="subdistrictatcard" name="subdistrictatcard" placeholder="">
+	  </div>
+    <div class="form-group col-md-2">
+			<label for="districtatcard" >อำเภอ (ตามบัตร)</label>
+		  <input type="text" class="form-control" id="districtatcard" name="districtatcard" placeholder="">
+	  </div>
+		<div class="form-group col-md-2">
+			<label for="provinceatcard" >จังหวัด (ตามบัตร)</label>
+		  <input type="text" class="form-control" id="provinceatcard" name="provinceatcard" placeholder="">
+	  </div> 
+    <div class="form-group col-md-2">
+			<label for="postcodeatcard" >รหัสไปรษณีย์ (ตามบัตร)</label>
+		  <input type="text" class="form-control" id="postcodeatcard" name="postcodeatcard" placeholder="">
+	  </div>
+	</div>
+
+  <div class="form-row">
+    <div class="form-group col-md-4">
+			<label for="realaddress" >ที่อยู่ปัจจุบัน</label>
+		  <input type="text" class="form-control" id="realaddress" name="realaddress" placeholder="">
+	  </div>
+    <div class="form-group col-md-2">
+			<label for="realsubdistrict" >ตำบล (ปัจจุบัน)</label>
+		  <input type="text" class="form-control" id="realsubdistrict" name="realsubdistrict" placeholder="">
+	  </div>
+    <div class="form-group col-md-2">
+			<label for="realdistrict" >อำเภอ (ปัจจุบัน)</label>
+		  <input type="text" class="form-control" id="realdistrict" name="realdistrict" placeholder="">
+	  </div>
+		<div class="form-group col-md-2">
+			<label for="realprovince" >จังหวัด (ปัจจุบัน)</label>
+		  <input type="text" class="form-control" id="realprovince" name="realprovince" placeholder="">
+	  </div>   
+    <div class="form-group col-md-2">
+			<label for="realpostcode" >รหัสไปรษณีย์ (ปัจจุบัน)</label>
+		  <input type="text" class="form-control" id="realpostcode" name="realpostcode" placeholder="">
+	  </div>    
+	</div>								
+  																
+  <div class="col-12">
+    <center><button type="submit" class="btn text-white" style="background-color:#A52A2A;" onclick=save();>บันทึกข้อมูล</button></center>
+    <script>
+      function save() {
+         swal({
+            title: "บันทึกข้อมูลสำเร็จ",
+            icon: "success",
+            timer: 2000
+          });           
+      }
+    </script>
+	</div>
+	
+</form>
+
+<!-- Footer -->
+    <footer><br>
+            <div class="container" style="background-color:#2E8B57;">
+                <br>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3 class="prompt text-white" align = 'center'>กองพัฒนานักศึกษา</h3>
+                        <h5 class="prompt text-white" align = 'center'>มหาวิทยาลัยราชภัฏกาญจนบุรี</h5>
+                        <h6 class="prompt text-white" align = 'center'>โทรศัพท์ : 034-534-080</h6>
+                    </div>
+                </div>
+                <br>
+            </div>
+    </footer>
+    <!-- ปิดแทก Footer -->
+  
