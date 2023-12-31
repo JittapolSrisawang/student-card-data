@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <base target="_top">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+        <?!= include('JavaScript'); ?> <!-- See JavaScript.html file -->
+        <?!= include('CSS'); ?> <!-- See CSS.html file -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
+        
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+
+	<style>
+		body {
+			font-family: "Prompt", sans-serif;
+			font-size: 15px;
+		}
+	</style>
+    </head>
+    <body>
+      <br>
+      <!-- Header -->
+      <div class="container"> 
+      <header><br>
+          <div style="background-color:#2E8B57;">
+              <div class="container">
+                  <br>
+                  <div class="row">
+                      <div class="col-lg-12">
+                          <h1 class="prompt text-white" align='center'>ระบบข้อมูลบัตรนักศึกษา</h1>
+                      </div>
+                  </div>
+                  <br>
+              </div>
+          </div>
+      </header>
+      </div>
+      <!-- ปิดแทก Header -->
+      <br>
+      <center>
+        <div class="form-group col-md-3 mx-auto">
+          <div id="message"></div>
+        </div>
+      </center>
+      
+      <!--
+      <center><img src="https://drive.google.com/uc?view&id=1D8_nGiiRXKXTIk1VFcvgDB92dVzhRKPM" width="100"></center>
+      <p class="h1 mb-4 text-center">ระบบข้อมูลบัตรนักศึกษา</p>
+      ------------------------------------------------ -->
+
+      <div class="container">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-3">
+              <center>
+                <div class="card text-center" style="width: 20rem; background-color:#FFEFD5; margin: .25rem .4rem;">
+                      <div class="card-header text-white bg-secondary">
+                      กรอก "รหัสนักศึกษา" และ "หมายเลขบัตรประชาชน" เพื่อค้นหาข้อมูล
+                      </div>
+                        <div class="card-body">
+                            <!-- ## ฟอร์มค้นหา------------------------------------------------ -->
+                            <form id="search-form" class="form-inline" onsubmit="handleFormSubmit(this)">                      
+                              <div class="form-group mb-2 mx-auto">
+                                <input type="text" class="form-control" id="searchtext" name="searchtext" placeholder="รหัสนักศึกษา">
+                              </div>
+                              <div class="form-group mb-2 mx-auto">
+                                <input type="password" class="form-control" id="searchtext2" name="searchtext2" placeholder="หมายเลขบัตรประชาชน">
+                              </div>
+                              <button type="submit" class="btn mb-2 mx-auto text-white" style="background-color:#A52A2A;">ค้นหา</button>
+                            </form>
+                            <!-- ## ปิดฟอร์ม ------------------------------------------- -->
+                        </div>
+                      </div>
+                </center>
+            </div>            
+            <div class="col-md-3">
+              <div class="card-body">       
+              </div>
+            </div>
+            <div class="col-md-6 mx-auto">
+              <div class="card-body" style="background-color:powderblue; margin: .25rem .4rem;">
+                <ul class="list-group">
+                  <li class="list-group-item"><h5>ขั้นตอนการใช้งานระบบ</h5></li>
+                  <li class="list-group-item">1. ค้นหาข้อมูลของนักศึกษาโดยกรอก "รหัสนักศึกษา" และ "หมายเลขบัตรประชาชน" ในช่องที่กำหนดแล้วคลิกปุ่ม "ค้นหา"</li>
+                  <li class="list-group-item">2. ตรวจสอบข้อมูลนักศึกษาและกรอกข้อมูลในช่องว่างให้ครบถ้วน เสร็จแล้วคลิกปุ่ม "บันทึกข้อมูล"</li>
+                  <li class="list-group-item">3. อัพโหลดรูปถ่ายชุดนักศึกษาและสำเนาบัตรประชาชนโดย <a  target="_blank" href ="https://script.google.com/a/macros/kru.ac.th/s/AKfycbw4sL4ZLbGTbQu2Mc2UxpDl-9hcy6pogSePVtdEN0sRl8efEdWWqzC4SlN85nZMRlpA5Q/exec" >คลิกที่นี่</a> </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>      
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                <?!= include('Form'); ?> <!-- See Form.html file -->
+                <br><br>
+                <div id="output"></div>
+              </div>
+          </div>      
+      </div>                 
+    </body>
+</html>
