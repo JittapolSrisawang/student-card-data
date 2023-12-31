@@ -1,0 +1,67 @@
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script>
+  // Prevent forms from submitting.
+  function preventFormSubmit() {
+    var forms = document.querySelectorAll('form');
+    for (var i = 0; i < forms.length; i++) {
+      forms[i].addEventListener('submit', function(event) {
+      event.preventDefault();
+      });
+    }
+  }
+  window.addEventListener("load", functionInit, true); 
+  
+  //INITIALIZE FUNCTIONS ONLOAD
+  function functionInit(){  
+    preventFormSubmit();
+  };      
+  
+  //HANDLE FORM SUBMISSION
+  function handleFormSubmit(formObject) {
+    google.script.run.withSuccessHandler(createTable).processForm(formObject);
+    //document.getElementById("search-form").reset();
+  }
+    
+  //CREATE THE DATA TABLE
+  function createTable(dataArray) {
+    if(dataArray){     
+          document.getElementById('RecId').value = dataArray[0][0];
+          document.getElementById('department').value = dataArray[0][1];
+          document.getElementById('faculty').value = dataArray[0][2];
+          document.getElementById('prefix').value = dataArray[0][3];
+          document.getElementById('name').value = dataArray[0][4];
+          document.getElementById('lastname').value = dataArray[0][5];
+          document.getElementById('prefixen').value = dataArray[0][6];
+          document.getElementById('nameen').value = dataArray[0][7];
+          document.getElementById('lastnameen').value = dataArray[0][8];
+          document.getElementById('id').value = dataArray[0][9];
+          document.getElementById('startid').value = dataArray[0][10];
+          document.getElementById('endid').value = dataArray[0][11];
+          document.getElementById('country').value = dataArray[0][12];
+          document.getElementById('nationality').value = dataArray[0][13];
+          document.getElementById('ethnicity').value = dataArray[0][14];
+          document.getElementById('gender').value = dataArray[0][15];
+          document.getElementById('blood').value = dataArray[0][16];
+          document.getElementById('dateOfBirth').value = dataArray[0][17];
+          document.getElementById('email').value = dataArray[0][18];
+          document.getElementById('telephone').value = dataArray[0][19];
+          document.getElementById('addressatcard').value = dataArray[0][20];
+          document.getElementById('provinceatcard').value = dataArray[0][21];
+          document.getElementById('districtatcard').value = dataArray[0][22];
+          document.getElementById('subdistrictatcard').value = dataArray[0][23];
+          document.getElementById('postcodeatcard').value = dataArray[0][24];
+          document.getElementById('realaddress').value = dataArray[0][25];
+          document.getElementById('realprovince').value = dataArray[0][26];
+          document.getElementById('realdistrict').value = dataArray[0][27];
+          document.getElementById('realsubdistrict').value = dataArray[0][28];
+          document.getElementById('realpostcode').value = dataArray[0][29];
+
+          document.getElementById("message").innerHTML = "<div class='alert alert-success' role='alert'>ค้นหาข้อมูลสำเร็จ</div>";    
+    }
+    //else{
+          //document.getElementById("message").innerHTML = "<div class='alert alert-danger' role='alert'>กรุณากรอกชื่อผู้ใช้และรหัสผ่าน</div>";
+    //}
+  }
+
+</script>
